@@ -854,8 +854,8 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
     bnResult.SetCompact(nBase);
     while (nTime > 0 && bnResult < bnProofOfWorkLimit)
     {
-        // Maximum 400% adjustment...
-        bnResult *= 4;
+        // Maximum 140% adjustment...
+        bnResult *= 1.4;
         // ... in best-case exactly 4-times-normal target time
         nTime -= nTargetTimespan*4;
     }
